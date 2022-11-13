@@ -41,6 +41,14 @@ class QuestionsViewController: UIViewController {
         super.viewDidLoad()
         updateUI()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "resultVC" {
+                let resultViewController = segue.destination as! ResultViewController
+                resultViewController.responses = answersChosen
+            }
+        }
+    
 
     //MARK: - IBActions
     @IBAction func singleButtonPressed(_ sender: UIButton) {
@@ -78,7 +86,7 @@ extension QuestionsViewController {
             return
         }
         
-        performSegue(withIdentifier: "showResult", sender: nil)
+        performSegue(withIdentifier: "resultVC", sender: nil)
     }
 }
 

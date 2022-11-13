@@ -12,9 +12,7 @@ struct Question {
 }
 
 enum ResponseType {
-    case single
-    case multiple
-    case ranged
+    case single, multiple, ranged
 }
 
 struct Answer {
@@ -23,10 +21,7 @@ struct Answer {
 }
 
 enum Animal: Character {
-    case dog = "🐶"
-    case cat = "🐱"
-    case rabbit = "🐇"
-    case turtle = "🐢"
+    case dog = "🐶", cat = "🐱", rabbit = "🐇", turtle = "🐢"
     
     var definition: String {
         switch self {

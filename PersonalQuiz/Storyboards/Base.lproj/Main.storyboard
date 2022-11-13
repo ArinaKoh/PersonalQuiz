@@ -3,6 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -282,7 +283,7 @@
                         <outletCollection property="multipleSwitches" destination="GgV-vo-F9N" collectionClass="NSMutableArray" id="yn7-Cc-2jj"/>
                         <outletCollection property="rangedLabels" destination="foL-S7-yEy" collectionClass="NSMutableArray" id="x39-iQ-Rg8"/>
                         <outletCollection property="rangedLabels" destination="00z-HU-3Vn" collectionClass="NSMutableArray" id="fi2-io-IKN"/>
-                        <segue destination="COa-Vb-xh0" kind="show" identifier="showResult" id="mfA-pA-Cq4"/>
+                        <segue destination="COa-Vb-xh0" kind="show" identifier="resultVC" id="ln4-tp-XmJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFj-yq-0MN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -323,17 +324,24 @@
                             <constraint firstItem="iyr-ic-J9q" firstAttribute="centerY" secondItem="VWL-4N-Reb" secondAttribute="centerY" id="pS1-Mj-xyP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Результат" id="38o-cI-cxX">
+                    <tabBarItem key="tabBarItem" title="Результат" id="mqn-3a-Auu">
+                        <imageReference key="image" image="graduationcap.fill" catalog="system" symbolScale="medium"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Результат" style="browser" id="38o-cI-cxX">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Y1B-ql-dfq">
                             <connections>
                                 <action selector="doneButtonPressed:" destination="COa-Vb-xh0" id="k4v-tP-Xlt"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="answerLabel" destination="wnQ-e8-VQE" id="47z-6P-mgj"/>
+                        <outlet property="definitionLabel" destination="WqO-Qq-hnn" id="hvj-cm-krW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qYh-Mo-gim" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2234" y="6"/>
+            <point key="canvasLocation" x="2277.5999999999999" y="2.2488755622188905"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ujV-WN-JFC">
@@ -355,6 +363,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="graduationcap.fill" catalog="system" width="128" height="108"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
